@@ -133,7 +133,7 @@ public class PizaGui extends javax.swing.JFrame {
 
         LblEmail.setText("E-mail címe:");
 
-        TxtEmail.setText("pledajanis@gmail.com");
+        TxtEmail.setText("peldajanos@gmail.com");
         TxtEmail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TxtEmailMouseClicked(evt);
@@ -483,36 +483,42 @@ public class PizaGui extends javax.swing.JFrame {
     private void BtnRendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRendelesActionPerformed
        //Ellenörizük hogy a mezők üresek-e
        boolean vanAdat;
-       vanAdat = !TxtNeve.getText().isEmpty()&& !TxtTelefonszama.getText().isEmpty() && !TxtCime.getText().isEmpty() && !TxtEmail.getText().isEmpty();
-       String uzenett, cim ="Figyelem!!";
+       vanAdat = TxtNeve.getText().isEmpty()&& TxtTelefonszama.getText().isEmpty() && TxtCime.getText().isEmpty() && TxtEmail.getText().isEmpty();
+       String uzenett, cim ="Értesítés!!";
        int ikonTipus;
        //if(TxtNeve.getText().isEmpty()&& TxtTelefonszama.getText().isEmpty() && TxtCime.getText().isEmpty() && TxtEmail.getText().isEmpty());
        boolean radioKivalasztas;
        boolean ChkBoxKivalasztva; 
-       radioKivalasztas = !Rdb25cm.isSelected() && !Rdb32cm.isSelected() && !Rdb50cm.isSelected() && !RdbCsokis.isSelected() && !RdbParadicsom.isSelected() && !Rdbtejfolos.isSelected() && !RdbHagy.isSelected() && !RdbOlasz.isSelected() && !RdbVastagt.isSelected();
-       ChkBoxKivalasztva = !CkbSonka.isSelected() && !CkbGomba.isSelected() && !CkbKolbasz.isSelected();
+       radioKivalasztas = Rdb25cm.isSelected() && Rdb32cm.isSelected() && Rdb50cm.isSelected() && RdbCsokis.isSelected() && RdbParadicsom.isSelected() && Rdbtejfolos.isSelected() && RdbHagy.isSelected() && RdbOlasz.isSelected() && RdbVastagt.isSelected();
+       ChkBoxKivalasztva = CkbSonka.isSelected() && CkbGomba.isSelected() && CkbKolbasz.isSelected();
        
-       if(!vanAdat && !radioKivalasztas && !ChkBoxKivalasztva)
+       if(!vanAdat && !radioKivalasztas &&!ChkBoxKivalasztva )
        {
-            cim=  cim + "Kitöltés probléma";
-            uzenett = "Nincsenek kitötltve az adatok!!!";
-            ikonTipus = JOptionPane.WARNING_MESSAGE;
-        
-       }
-       else{
+           
             cim=  cim + "Rendelés felvéve";
             uzenett = "Rendelését felvettük. E-mailbe értesitjük, amikor elkészült.";
             ikonTipus = JOptionPane.INFORMATION_MESSAGE;//2;
+            
+       }
+       else{
+             cim=  cim + "Kitöltés probléma";
+            uzenett = "Nincsenek kitötltve az adatok!!!";
+            ikonTipus = JOptionPane.WARNING_MESSAGE;
+           
         }
-       
-       
        
        JOptionPane.showMessageDialog(null, uzenett, cim, ikonTipus);
        
     }//GEN-LAST:event_BtnRendelesActionPerformed
 
     private void BtnTorlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTorlesActionPerformed
-        //Text mezöböl törlés
+      
+       int response = JOptionPane.showConfirmDialog(null, "Biztosan törölni szeretné a rendelést?", "Megerősités", JOptionPane.YES_NO_OPTION);
+       String  cim  ="Figyelmeztetés!";
+       int ikonTipus2;
+       String uzenet ="Rendelése trölölve lett!!";
+       if (response == JOptionPane.YES_OPTION)
+        {
         TxtNeve.setText("");
         TxtTelefonszama.setText("");
         TxtCime.setText("");
@@ -528,6 +534,16 @@ public class PizaGui extends javax.swing.JFrame {
         CkbSonka.setSelected(false);
         CkbKolbasz.setSelected(false);
         CkbGomba.setSelected(false);
+        cim = cim +"Rendelés törlés";
+        ikonTipus2=JOptionPane.WARNING_MESSAGE;
+        JOptionPane.showMessageDialog(rootPane,uzenet, cim, ikonTipus2 );
+        }
+        else
+        {
+            
+        }
+
+        
         
     }//GEN-LAST:event_BtnTorlesActionPerformed
 
@@ -685,4 +701,8 @@ public class PizaGui extends javax.swing.JFrame {
     private javax.swing.JTextField TxtNeve;
     private javax.swing.JTextField TxtTelefonszama;
     // End of variables declaration//GEN-END:variables
+
+    private int JOptionPane(Object object, String biztosan_törölni_szeretné_a_rendelést, String megerősités, int YES_NO_OPTION) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
