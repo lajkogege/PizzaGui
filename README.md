@@ -1,2 +1,2 @@
-# PizzaGui
-GitHub-on létre hozva:Lajkó Gergő 
+## PizzaGui
+# GitHub-on létre hozva:**Lajkó Gergő**
