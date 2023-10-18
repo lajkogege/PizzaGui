@@ -516,7 +516,7 @@ public class PizaGui extends javax.swing.JFrame {
        int response = JOptionPane.showConfirmDialog(null, "Biztosan törölni szeretné a rendelést?", "Megerősités", JOptionPane.YES_NO_OPTION);
        String  cim  ="Figyelmeztetés!";
        int ikonTipus2;
-       String uzenet ="Rendelése trölölve lett!!";
+       String uzenet ="Rendelése törölve lett!!";
        if (response == JOptionPane.YES_OPTION)
         {
         TxtNeve.setText("");
@@ -534,7 +534,7 @@ public class PizaGui extends javax.swing.JFrame {
         CkbSonka.setSelected(false);
         CkbKolbasz.setSelected(false);
         CkbGomba.setSelected(false);
-        cim = cim +"Rendelés törlés";
+        cim = cim +" Rendelés törlve";
         ikonTipus2=JOptionPane.WARNING_MESSAGE;
         JOptionPane.showMessageDialog(rootPane,uzenet, cim, ikonTipus2 );
         }
