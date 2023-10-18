@@ -481,7 +481,7 @@ public class PizaGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnRendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRendelesActionPerformed
-       JOptionPane.showMessageDialog(rootPane, "Ez egy teszt verzió");
+       JOptionPane.showMessageDialog(rootPane, "Ez egy teszt verzió","Cím2");
        //Ellenörizük hogy a mezők üresek-e
        boolean vanAdat;
        vanAdat = !TxtNeve.getText().isEmpty()&& !TxtTelefonszama.getText().isEmpty() && !TxtCime.getText().isEmpty() && !TxtEmail.getText().isEmpty();
