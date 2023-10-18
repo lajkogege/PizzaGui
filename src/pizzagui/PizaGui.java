@@ -519,6 +519,7 @@ public class PizaGui extends javax.swing.JFrame {
        String uzenet ="Rendelése törölve lett!!";
        if (response == JOptionPane.YES_OPTION)
         {
+        //Text 
         TxtNeve.setText("");
         TxtTelefonszama.setText("");
         TxtCime.setText("");
