@@ -85,14 +85,12 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="JpMeret" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="JpTeszta" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="JpAlap" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="LblKep" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="JpTeszta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="JpAlap" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="LblKep" alignment="1" pref="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -124,7 +122,7 @@
     <Component class="javax.swing.JLabel" name="LblKep">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\lajko\Documents\NetBeansProjects\PizzaGui\kepek\pizzaa.jpg"/>
+          <Image iconType="2" name="C:\Users\Lajk&#xf3;Gerg&#x151;(SZOFT_202\Documents\NetBeansProjects\2023.10.18\PizzaGui\kepek\pizzaa.jpg"/>
         </Property>
       </Properties>
     </Component>
@@ -480,9 +478,6 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="CkbSonka">
           <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="default"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="sonka"/>
           </Properties>
           <Events>
@@ -491,9 +486,6 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="CkbKolbasz">
           <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="default"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="kolb&#xe1;sz"/>
           </Properties>
           <Events>
@@ -502,9 +494,6 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="CkbGomba">
           <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="default"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="gomba"/>
           </Properties>
           <Events>

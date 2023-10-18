@@ -85,7 +85,7 @@ public class PizaGui extends javax.swing.JFrame {
             }
         });
 
-        LblKep.setIcon(new javax.swing.ImageIcon("C:\\Users\\lajko\\Documents\\NetBeansProjects\\PizzaGui\\kepek\\pizzaa.jpg")); // NOI18N
+        LblKep.setIcon(new javax.swing.ImageIcon("C:\\Users\\LajkóGergő(SZOFT_202\\Documents\\NetBeansProjects\\2023.10.18\\PizzaGui\\kepek\\pizzaa.jpg")); // NOI18N
 
         JpRendAdat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -464,12 +464,11 @@ public class PizaGui extends javax.swing.JFrame {
                         .addComponent(JpFeltet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(JpMeret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(JpTeszta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(JpAlap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(LblKep, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(JpTeszta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(JpAlap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LblKep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnTorles)
@@ -482,14 +481,17 @@ public class PizaGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnRendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRendelesActionPerformed
+       JOptionPane.showMessageDialog(rootPane, "Ez egy teszt verzió");
        //Ellenörizük hogy a mezők üresek-e
        boolean vanAdat;
        vanAdat = !TxtNeve.getText().isEmpty()&& !TxtTelefonszama.getText().isEmpty() && !TxtCime.getText().isEmpty() && !TxtEmail.getText().isEmpty();
        String uzenett, cim ="Figyelem!!";
        int ikonTipus;
        //if(TxtNeve.getText().isEmpty()&& TxtTelefonszama.getText().isEmpty() && TxtCime.getText().isEmpty() && TxtEmail.getText().isEmpty());
-       boolean radioKivalasztas = !Rdb25cm.isSelected() && !Rdb32cm.isSelected() && !Rdb50cm.isSelected() && !RdbCsokis.isSelected() && !RdbParadicsom.isSelected() && !Rdbtejfolos.isSelected() && !RdbHagy.isSelected() && !RdbOlasz.isSelected() && !RdbVastagt.isSelected();
-       boolean ChkBoxKivalasztva = !CkbSonka.isSelected() && !CkbGomba.isSelected() && !CkbKolbasz.isSelected();
+       boolean radioKivalasztas;
+       boolean ChkBoxKivalasztva; 
+       radioKivalasztas = !Rdb25cm.isSelected() && !Rdb32cm.isSelected() && !Rdb50cm.isSelected() && !RdbCsokis.isSelected() && !RdbParadicsom.isSelected() && !Rdbtejfolos.isSelected() && !RdbHagy.isSelected() && !RdbOlasz.isSelected() && !RdbVastagt.isSelected();
+       ChkBoxKivalasztva = !CkbSonka.isSelected() && !CkbGomba.isSelected() && !CkbKolbasz.isSelected();
        
        if(!vanAdat && !radioKivalasztas && !ChkBoxKivalasztva)
        {
